@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#7D3544">
+    <meta name="description" content="Your private ELARA patient dashboard for appointments, treatment history and skin progress.">
+
+    <title>Patient Dashboard | ELARA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="./assets/js/global.js" defer></script>
+    <script src="./assets/js/dashboard.js" defer></script>
+</head>
+
+<body class="dashboard-page">
+
+    <div class="dashboard-shell">
+
+        <!-- MOBILE OVERLAY -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- FIXED SIDEBAR -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+            <a href="index.html" class="brand-logo dashboard-brand">
+                <img src="./images/logo/logo.png" alt="ELARA logo">
+                <span class="brand-name">
+                    <span class="brand-title">ELARA</span>
+                    <span class="brand-subtitle">SKIN CLINIC</span>
+                </span>
+            </a>
+
+            <div class="sidebar-welcome">
+                <span class="sidebar-welcome-label">PATIENT PORTAL</span>
+                <h2>Your skin journey</h2>
+                <p>Personalized care, all in one place.</p>
+            </div>
+
+            <nav class="dashboard-navigation" aria-label="Patient dashboard navigation">
+                <span class="sidebar-section-label">WORKSPACE</span>
+
+                <button class="dashboard-nav-link active" type="button" data-section="overview">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Overview</span>
+                </button>
+
+                <button class="dashboard-nav-link" type="button" data-section="appointments">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Appointments</span>
+                </button>
+
+                <button class="dashboard-nav-link" type="button" data-section="treatments">
+                    <i data-lucide="heart-pulse"></i>
+                    <span>My Treatments</span>
+                </button>
+
+                <button class="dashboard-nav-link" type="button" data-section="progress">
+                    <i data-lucide="images"></i>
+                    <span>Skin Progress</span>
+                </button>
+
+                <button class="dashboard-nav-link" type="button" data-section="history">
+                    <i data-lucide="clipboard-list"></i>
+                    <span>Treatment History</span>
+                </button>
+
+                <span class="sidebar-section-label sidebar-section-spaced">ACCOUNT</span>
+
+                <button class="dashboard-nav-link" type="button" data-section="profile">
+                    <i data-lucide="user-round"></i>
+                    <span>My Profile</span>
+                </button>
+                
+            </nav>
+
+            <div class="sidebar-support-card">
+                <span class="support-icon"><i data-lucide="messages-square"></i></span>
+                <h3>Need a little help?</h3>
+                <p>Contact the clinic for assistance with your care.</p>
+                <a href="contact.html">Contact clinic <i data-lucide="arrow-up-right"></i></a>
+            </div>
+
+            <div class="sidebar-footer">
+                <span class="sidebar-status-dot"></span>
+                <span>Your care space is private</span>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="dashboard-main">
+
+            <!-- TOPBAR -->
+            <header class="dashboard-topbar">
+
+                <div class="topbar-left">
+                    <button class="dashboard-menu-toggle" id="dashboardMenuToggle" type="button"
+                            aria-label="Open dashboard menu" aria-expanded="false">
+                        <i data-lucide="menu"></i>
+                    </button>
+
+                    <div class="topbar-heading">
+                        <span class="topbar-eyebrow">ELARA / PATIENT PORTAL</span>
+                        <h1 id="topbarTitle">Overview</h1>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+                    <button class="icon-button" id="rtlToggle" type="button"
+                            aria-label="Toggle RTL" aria-pressed="false">RTL</button>
+
+                    <button class="icon-button theme-toggle" id="themeToggle" type="button"
+                            aria-label="Toggle dark mode" aria-pressed="false">
+                        <i data-lucide="moon"></i>
+                    </button>
+
+                    <button class="dashboard-profile-shortcut" type="button" data-open-section="profile">
+                        <span class="profile-avatar">P</span>
+                        <span class="profile-shortcut-copy">
+                            <strong id="topbarPatientName">Patient</strong>
+                            <small>My account</small>
+                        </span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+
+                <!-- =========================================
+                     1. OVERVIEW
+                ========================================== -->
+                <section class="dashboard-section active" id="section-overview" data-page-title="Overview">
+
+                    <div class="dashboard-welcome-banner">
+                        <div class="welcome-banner-copy">
+                            <span class="dashboard-eyebrow">YOUR PERSONAL SKINCARE SPACE</span>
+                            <h2>A little care goes a long way<span>.</span></h2>
+                            <p>Keep up with your appointments, follow your treatment plan and celebrate your skin progress.</p>
+
+                            <button class="dashboard-action-button" type="button" data-open-section="appointments">
+                                Request an appointment
+                                <i data-lucide="arrow-up-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="welcome-banner-decoration" aria-hidden="true">
+                            <span class="decoration-circle decoration-circle-one"></span>
+                            <span class="decoration-circle decoration-circle-two"></span>
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-section-heading">
+                        <div>
+                            <span class="dashboard-eyebrow">YOUR CARE AT A GLANCE</span>
+                            <h2>Welcome back, <span id="welcomePatientName">Patient</span></h2>
+                            <p>Here is a quick look at your skincare journey.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-stat-grid">
+                        <article class="dashboard-stat-card">
+                            <div class="stat-card-top">
+                                <span class="stat-icon stat-icon-burgundy"><i data-lucide="calendar-check"></i></span>
+                                <span class="stat-label">Appointments</span>
+                            </div>
+                            <strong class="stat-number" id="appointmentCount">0</strong>
+                            <span class="stat-caption">Requests in this session</span>
+                        </article>
+
+                        <article class="dashboard-stat-card">
+                            <div class="stat-card-top">
+                                <span class="stat-icon stat-icon-sand"><i data-lucide="heart-pulse"></i></span>
+                                <span class="stat-label">Treatments</span>
+                            </div>
+                            <strong class="stat-number" id="treatmentCount">3</strong>
+                            <span class="stat-caption">Care options to explore</span>
+                        </article>
+
+                        <article class="dashboard-stat-card">
+                            <div class="stat-card-top">
+                                <span class="stat-icon stat-icon-rose"><i data-lucide="images"></i></span>
+                                <span class="stat-label">Progress photos</span>
+                            </div>
+                            <strong class="stat-number" id="progressCount">0</strong>
+                            <span class="stat-caption">Photos added in this session</span>
+                        </article>
+
+                        <article class="dashboard-stat-card">
+                            <div class="stat-card-top">
+                                <span class="stat-icon stat-icon-green"><i data-lucide="clipboard-check"></i></span>
+                                <span class="stat-label">Care records</span>
+                            </div>
+                            <strong class="stat-number" id="historyCount">0</strong>
+                            <span class="stat-caption">Entries added in this session</span>
+                        </article>
+                    </div>
+
+                    <div class="dashboard-overview-grid">
+
+                        <article class="dashboard-card next-appointment-card">
+                            <div class="card-heading">
+                                <div>
+                                    <span class="dashboard-eyebrow">STAY ON TRACK</span>
+                                    <h3>Appointments</h3>
+                                </div>
+                                <span class="card-heading-icon"><i data-lucide="calendar-clock"></i></span>
+                            </div>
+
+                            <div class="appointment-empty-state" id="nextAppointmentEmpty">
+                                <span class="empty-state-icon"><i data-lucide="calendar-plus"></i></span>
+                                <h4>No appointment requests yet</h4>
+                                <p>Request a visit and keep your next step in one place.</p>
+                                <button class="dashboard-text-button" type="button" data-open-section="appointments">
+                                    Request a visit <i data-lucide="arrow-up-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="next-appointment-details" id="nextAppointmentDetails" hidden>
+                                <span class="appointment-status-pill">Request submitted</span>
+                                <h4 id="nextAppointmentTreatment">Skin consultation</h4>
+                                <p id="nextAppointmentDate"></p>
+                                <p id="nextAppointmentDoctor"></p>
+                                <button class="dashboard-text-button" type="button" data-open-section="appointments">
+                                    View appointment requests <i data-lucide="arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="dashboard-card care-reminder-card">
+                            <span class="care-reminder-icon"><i data-lucide="flower-2"></i></span>
+                            <span class="dashboard-eyebrow">A GENTLE REMINDER</span>
+                            <h3>Consistency over perfection.</h3>
+                            <p>Follow the routine recommended by your dermatologist and discuss any concerns during your next visit.</p>
+                            <button class="dashboard-outline-button" type="button" data-open-section="treatments">
+                                Explore care options <i data-lucide="arrow-up-right"></i>
+                            </button>
+                        </article>
+
+                    </div>
+
+                    <div class="dashboard-card quick-actions-card">
+                        <div class="card-heading">
+                            <div>
+                                <span class="dashboard-eyebrow">MAKE YOUR NEXT STEP EASY</span>
+                                <h3>Quick actions</h3>
+                            </div>
+                        </div>
+
+                        <div class="quick-actions-grid">
+                            <button class="quick-action-item" type="button" data-open-section="appointments">
+                                <span class="quick-action-icon"><i data-lucide="calendar-plus"></i></span>
+                                <span><strong>Request a visit</strong><small>Choose your preferred date</small></span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </button>
+
+                            <button class="quick-action-item" type="button" data-open-section="progress">
+                                <span class="quick-action-icon"><i data-lucide="image-plus"></i></span>
+                                <span><strong>Add progress photos</strong><small>Compare your skin journey</small></span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </button>
+
+                            <button class="quick-action-item" type="button" data-open-section="history">
+                                <span class="quick-action-icon"><i data-lucide="notebook-pen"></i></span>
+                                <span><strong>Update care history</strong><small>Record a treatment note</small></span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- =========================================
+                     2. APPOINTMENTS
+                ========================================== -->
+                <section class="dashboard-section" id="section-appointments" data-page-title="Appointments" hidden>
+
+                    <div class="dashboard-section-heading">
+                        <div>
+                            <span class="dashboard-eyebrow">PLAN YOUR NEXT VISIT</span>
+                            <h2>Appointments</h2>
+                            <p>Send an appointment request with your preferred date and treatment.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-two-column">
+                        <article class="dashboard-card dashboard-form-card">
+                            <div class="card-heading">
+                                <div>
+                                    <span class="dashboard-eyebrow">APPOINTMENT REQUEST</span>
+                                    <h3>Tell us what works for you</h3>
+                                </div>
+                                <span class="card-heading-icon"><i data-lucide="calendar-days"></i></span>
+                            </div>
+
+                            <form id="appointmentForm" class="dashboard-form">
+                                <div class="form-field">
+                                    <label for="appointmentType">Treatment or visit type</label>
+                                    <select id="appointmentType" name="appointmentType" required>
+                                        <option value="">Choose a visit type</option>
+                                        <option value="Skin consultation">Skin consultation</option>
+                                        <option value="Acne care">Acne care</option>
+                                        <option value="Laser therapy">Laser therapy</option>
+                                        <option value="Pigmentation care">Pigmentation care</option>
+                                        <option value="Follow-up visit">Follow-up visit</option>
+                                        <option value="Other concern">Other skin concern</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="appointmentDate">Preferred date</label>
+                                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="appointmentTime">Preferred time</label>
+                                        <select id="appointmentTime" name="appointmentTime" required>
+                                            <option value="">Choose a time</option>
+                                            <option value="Morning">Morning</option>
+                                            <option value="Afternoon">Afternoon</option>
+                                            <option value="Evening">Evening</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="appointmentDoctor">Preferred dermatologist</label>
+                                    <select id="appointmentDoctor" name="appointmentDoctor">
+                                        <option value="Any available dermatologist">Any available dermatologist</option>
+                                        <option value="Dr. Aanya Mehta">Dr. Aanya Mehta</option>
+                                        <option value="Dr. Rohan Kapoor">Dr. Rohan Kapoor</option>
+                                        <option value="Dr. Mira Shah">Dr. Mira Shah</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="appointmentNotes">Additional notes <span>(optional)</span></label>
+                                    <textarea id="appointmentNotes" name="appointmentNotes" rows="4"
+                                              placeholder="Briefly share what you would like to discuss."></textarea>
+                                </div>
+
+                                <button class="dashboard-action-button" type="submit">
+                                    Submit request <i data-lucide="arrow-up-right"></i>
+                                </button>
+
+                                <p class="form-disclaimer">
+                                    This demo records your request in the current page session only. It does not book or confirm a real clinic appointment.
+                                </p>
+                            </form>
+                        </article>
+
+                        <article class="dashboard-card appointment-list-card">
+                            <div class="card-heading">
+                                <div>
+                                    <span class="dashboard-eyebrow">YOUR REQUESTS</span>
+                                    <h3>Appointment activity</h3>
+                                </div>
+                            </div>
+
+                            <div class="appointment-list-empty" id="appointmentListEmpty">
+                                <i data-lucide="calendar"></i>
+                                <p>Your submitted appointment requests will appear here.</p>
+                            </div>
+
+                            <div class="appointment-list" id="appointmentList"></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- =========================================
+                     3. TREATMENTS
+                ========================================== -->
+                <section class="dashboard-section" id="section-treatments" data-page-title="My Treatments" hidden>
+
+                    <div class="dashboard-section-heading">
+                        <div>
+                            <span class="dashboard-eyebrow">PERSONALIZED SKINCARE</span>
+                            <h2>My treatments</h2>
+                            <p>Explore common care options to discuss with your dermatologist.</p>
+                        </div>
+                    </div>
+
+                    <div class="treatment-notice">
+                        <i data-lucide="info"></i>
+                        <p>These are general treatment categories, not a prescribed treatment plan. Your dermatologist can advise what is suitable for you.</p>
+                    </div>
+
+                    <div class="treatment-cards-grid">
+                        <article class="treatment-detail-card">
+                            <div class="treatment-card-art treatment-art-acne">
+                                <span class="treatment-art-icon"><i data-lucide="scan-face"></i></span>
+                                <span class="treatment-card-number">01</span>
+                            </div>
+                            <div class="treatment-card-body">
+                                <span class="treatment-category">TARGETED SKINCARE</span>
+                                <h3>Acne care</h3>
+                                <p>Professional assessment and a personalized approach to acne, breakouts and post-acne concerns.</p>
+                                <ul>
+                                    <li><i data-lucide="check"></i> Skin assessment</li>
+                                    <li><i data-lucide="check"></i> Routine guidance</li>
+                                    <li><i data-lucide="check"></i> Follow-up planning</li>
+                                </ul>
+                                <button class="dashboard-outline-button treatment-request-button" type="button" data-treatment="Acne care">
+                                    Request consultation <i data-lucide="arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="treatment-detail-card">
+                            <div class="treatment-card-art treatment-art-laser">
+                                <span class="treatment-art-icon"><i data-lucide="scan"></i></span>
+                                <span class="treatment-card-number">02</span>
+                            </div>
+                            <div class="treatment-card-body">
+                                <span class="treatment-category">ADVANCED CARE</span>
+                                <h3>Laser therapy</h3>
+                                <p>Learn about suitable laser-based options after a professional assessment of your skin and goals.</p>
+                                <ul>
+                                    <li><i data-lucide="check"></i> Eligibility assessment</li>
+                                    <li><i data-lucide="check"></i> Procedure discussion</li>
+                                    <li><i data-lucide="check"></i> Aftercare guidance</li>
+                                </ul>
+                                <button class="dashboard-outline-button treatment-request-button" type="button" data-treatment="Laser therapy">
+                                    Request consultation <i data-lucide="arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="treatment-detail-card">
+                            <div class="treatment-card-art treatment-art-consult">
+                                <span class="treatment-art-icon"><i data-lucide="stethoscope"></i></span>
+                                <span class="treatment-card-number">03</span>
+                            </div>
+                            <div class="treatment-card-body">
+                                <span class="treatment-category">START WITH THE BASICS</span>
+                                <h3>Skin consultation</h3>
+                                <p>Discuss your concerns, current routine and goals with a qualified skin professional.</p>
+                                <ul>
+                                    <li><i data-lucide="check"></i> Discuss skin concerns</li>
+                                    <li><i data-lucide="check"></i> Review current routine</li>
+                                    <li><i data-lucide="check"></i> Discuss next steps</li>
+                                </ul>
+                                <button class="dashboard-outline-button treatment-request-button" type="button" data-treatment="Skin consultation">
+                                    Request consultation <i data-lucide="arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- =========================================
+                     4. SKIN PROGRESS
+                ========================================== -->
+                <section class="dashboard-section" id="section-progress" data-page-title="Skin Progress" hidden>
+
+                    <div class="dashboard-section-heading">
+                        <div>
+                            <span class="dashboard-eyebrow">YOUR JOURNEY, YOUR PACE</span>
+                            <h2>Skin progress</h2>
+                            <p>Add before-and-after photos to review your progress over time.</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-privacy-note">
+                        <span class="privacy-note-icon"><i data-lucide="shield-check"></i></span>
+                        <div>
+                            <strong>Keep your progress photos private.</strong>
+                            <p>This front-end demo previews selected images in your browser session. It does not upload photos to a secure server or provide real account-level privacy.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-two-column progress-upload-layout">
+                        <article class="dashboard-card dashboard-form-card">
+                            <div class="card-heading">
+                                <div>
+                                    <span class="dashboard-eyebrow">ADD A PROGRESS ENTRY</span>
+                                    <h3>Document your journey</h3>
+                                </div>
+                                <span class="card-heading-icon"><i data-lucide="image-plus"></i></span>
+                            </div>
+
+                            <form id="progressForm" class="dashboard-form">
+                                <div class="form-field">
+                                    <label for="progressTreatment">Treatment category</label>
+                                    <select id="progressTreatment" name="progressTreatment" required>
+                                        <option value="">Choose a category</option>
+                                        <option value="Acne care">Acne care</option>
+                                        <option value="Laser therapy">Laser therapy</option>
+                                        <option value="Skin consultation">Skin consultation</option>
+                                        <option value="General skincare">General skincare</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="progressDate">Photo date</label>
+                                    <input type="date" id="progressDate" name="progressDate" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="beforePhoto">Before photo</label>
+                                        <label class="photo-upload-box" for="beforePhoto">
+                                            <i data-lucide="upload"></i>
+                                            <strong>Choose image</strong>
+                                            <small>JPG, PNG or WebP</small>
+                                            <input type="file" id="beforePhoto" accept="image/jpeg,image/png,image/webp">
+                                        </label>
+                                        <div class="photo-preview" id="beforePhotoPreview"></div>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="afterPhoto">After photo</label>
+                                        <label class="photo-upload-box" for="afterPhoto">
+                                            <i data-lucide="upload"></i>
+                                            <strong>Choose image</strong>
+                                            <small>JPG, PNG or WebP</small>
+                                            <input type="file" id="afterPhoto" accept="image/jpeg,image/png,image/webp">
+                                        </label>
+                                        <div class="photo-preview" id="afterPhotoPreview"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="progressNotes">Notes <span>(optional)</span></label>
+                                    <textarea id="progressNotes" name="progressNotes" rows="3"
+                                              placeholder="Add a note about this entry."></textarea>
+                                </div>
+
+                                <button class="dashboard-action-button" type="submit">
+                                    Save progress entry <i data-lucide="arrow-up-right"></i>
+                                </button>
+                            </form>
+                        </article>
+
+                        <article class="dashboard-card progress-gallery-card">
+                            <div class="card-heading">
+                                <div>
+                                    <span class="dashboard-eyebrow">YOUR PHOTO JOURNAL</span>
+                                    <h3>Progress entries</h3>
+                                </div>
+                                <span class="gallery-count" id="galleryCount">0 entries</span>
+                            </div>
+
+                            <div class="progress-gallery-empty" id="progressGalleryEmpty">
+                                <span><i data-lucide="images"></i></span>
+                                <h4>Your photo journal starts here</h4>
+                                <p>Add a progress entry to see your images and notes here.</p>
+                            </div>
+
+                            <div class="progress-gallery" id="progressGallery"></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- =========================================
+                     5. TREATMENT HISTORY
+                ========================================== -->
+                <section class="dashboard-section" id="section-history" data-page-title="Treatment History" hidden>
+
+                    <div class="dashboard-section-heading">
+                        <div>
+                            <span class="dashboard-eyebrow">KEEP YOUR NOTES TOGETHER</span>
+                            <h2>Treatment history</h2>
+                            <p>Use this space to keep personal notes about visits and care discussions.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-two-column">
+                        <article class="dashboard-card dashboard-form-card">
+                            <div class="card-heading">
+                                <div>
+                                    <span class="dashboard-eyebrow">NEW HISTORY ENTRY</span>
+                                    <h3>Add a care note</h3>
+                                </div>
+                                <span class="card-heading-icon"><i data-lucide="notebook-pen"></i></span>
+                            </div>
+
+                            <form id="historyForm" class="dashboard-form">
+                                <div class="form-field">
+                                    <label for="historyTitle">Entry title</label>
+                                    <input type="text" id="historyTitle" name="historyTitle"
+                                           placeholder="e.g. Follow-up consultation" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="historyDate">Date</label>
+                                        <input type="date" id="historyDate" name="historyDate" required>
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="historyCategory">Category</label>
+                                        <select id="historyCategory" name="historyCategory" required>
+                                            <option value="">Choose category</option>
+                                            <option value="Consultation">Consultation</option>
+                                            <option value="Treatment">Treatment</option>
+                                            <option value="Follow-up">Follow-up</option>
+                                            <option value="Routine">Routine</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="historyNotes">Notes</label>
+                                    <textarea id="historyNotes" name="historyNotes" rows="5"
+                                              placeholder="Write your personal notes..." required></textarea>
+                                </div>
+
+                                <button class="dashboard-action-button" type="submit">
+                                    Add history entry <i data-lucide="plus"></i>
+                                </button>
+
+                                <p class="form-disclaimer">
+                                    Do not use this demo as a substitute for official medical records or urgent medical advice.
+                                </p>
+                            </form>
+                        </article>
+
+                        <article class="dashboard-card history-list-card">
+                            <div class="card-heading">
+                                <div>
+                                    <span class="dashboard-eyebrow">YOUR NOTES</span>
+                                    <h3>Recent entries</h3>
+                                </div>
+                                <span class="gallery-count" id="historyListCount">0 entries</span>
+                            </div>
+
+                            <div class="history-empty-state" id="historyEmptyState">
+                                <span><i data-lucide="clipboard-list"></i></span>
+                                <h4>No history entries yet</h4>
+                                <p>Your notes will appear here after you add an entry.</p>
+                            </div>
+
+                            <div class="history-list" id="historyList"></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- =========================================
+                     6. PROFILE
+                ========================================== -->
+                <section class="dashboard-section" id="section-profile" data-page-title="My Profile" hidden>
+
+                    <div class="dashboard-section-heading">
+                        <div>
+                            <span class="dashboard-eyebrow">YOUR ACCOUNT DETAILS</span>
+                            <h2>My profile</h2>
+                            <p>Manage the personal details displayed in this dashboard.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-two-column profile-layout">
+                        <article class="dashboard-card profile-summary-card">
+                            <div class="profile-summary-top">
+                                <span class="profile-avatar profile-avatar-large" id="profileAvatar">P</span>
+                                <span class="dashboard-eyebrow">PATIENT PROFILE</span>
+                            </div>
+                            <h3 id="profileDisplayName">Patient</h3>
+                            <p id="profileDisplayEmail">Add your email address</p>
+                            <div class="profile-summary-divider"></div>
+                            <div class="profile-summary-detail">
+                                <span><i data-lucide="shield-check"></i> Personal details</span>
+                                <small>Demo profile</small>
+                            </div>
+                            <p class="profile-summary-note">Your profile details are stored only in this page session in the current demo.</p>
+                        </article>
+
+                        <article class="dashboard-card dashboard-form-card">
+                            <div class="card-heading">
+                                <div>
+                                    <span class="dashboard-eyebrow">PERSONAL INFORMATION</span>
+                                    <h3>Update your details</h3>
+                                </div>
+                                <span class="card-heading-icon"><i data-lucide="user-round-pen"></i></span>
+                            </div>
+
+                            <form id="profileForm" class="dashboard-form">
+                                <div class="form-field">
+                                    <label for="profileName">Full name</label>
+                                    <input type="text" id="profileName" name="profileName" placeholder="Your full name" required>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="profileEmail">Email address</label>
+                                    <input type="email" id="profileEmail" name="profileEmail" placeholder="you@example.com">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="profilePhone">Phone number</label>
+                                    <input type="tel" id="profilePhone" name="profilePhone" placeholder="Your contact number">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="profileSkinConcern">Main skin concern</label>
+                                    <select id="profileSkinConcern" name="profileSkinConcern">
+                                        <option value="">Select if you wish</option>
+                                        <option value="Acne and breakouts">Acne and breakouts</option>
+                                        <option value="Pigmentation">Pigmentation</option>
+                                        <option value="Skin texture">Skin texture</option>
+                                        <option value="General skincare">General skincare</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <button class="dashboard-action-button" type="submit">
+                                    Save profile <i data-lucide="check"></i>
+                                </button>
+                            </form>
+                        </article>
+                    </div>
+                </section>
+
+                <footer class="dashboard-page-footer">
+                    <p>© <span id="dashboardCurrentYear"></span> ELARA Skin Clinic</p>
+                    <span><i data-lucide="heart-handshake"></i> Thoughtful care, every step of the way.</span>
+                </footer>
+
+            </div>
+        </main>
+    </div>
+
+    <div class="dashboard-toast" id="dashboardToast" role="status" aria-live="polite"></div>
+
+</body>
+</html>

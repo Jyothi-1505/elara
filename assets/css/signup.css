@@ -1,0 +1,509 @@
+
+/* =========================================================
+   SIGNUP PAGE
+   Shared authentication design from login.css
+========================================================= */
+
+.signup-form-wrapper {
+    max-width: 430px;
+    padding-block: 8px;
+}
+
+.signup-form-wrapper .auth-heading {
+    margin-bottom: 16px;
+}
+
+.signup-form-wrapper .auth-heading h2 {
+    margin-block: 8px 6px;
+}
+
+.signup-form-wrapper .auth-heading p {
+    font-size: 13px;
+}
+
+.signup-form {
+    gap: 12px;
+}
+
+.signup-form .auth-field {
+    gap: 5px;
+}
+
+.signup-form .auth-field input {
+    height: 42px;
+    padding-block: 9px;
+}
+
+.signup-form .auth-password input {
+    padding-inline-end: 58px;
+}
+
+.signup-form .auth-password__toggle {
+    font-size: 11px;
+}
+
+.signup-terms {
+    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 1px;
+    line-height: 1.5;
+}
+
+.signup-terms input {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.signup-terms span {
+    min-width: 0;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.signup-terms a {
+    color: var(--color-primary, #7D3544);
+    text-decoration: none;
+}
+
+.signup-terms a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.signup-form-wrapper .auth-message {
+    margin: -5px 0;
+}
+
+.signup-form-wrapper .auth-switch {
+    margin-top: 12px;
+}
+
+.signup-form-wrapper .auth-back-link {
+    margin-top: 7px;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html[data-theme="dark"] .signup-terms a {
+    color: var(--color-secondary, #B99A78);
+}
+
+/* =========================================================
+   TABLET — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+    .signup-form-wrapper {
+        padding-block: 4px;
+    }
+
+    .signup-form {
+        gap: 10px;
+    }
+
+    .signup-form .auth-field input {
+        height: 40px;
+    }
+
+    .signup-form-wrapper .auth-heading {
+        margin-bottom: 12px;
+    }
+
+    .signup-form-wrapper .auth-switch {
+        margin-top: 9px;
+    }
+
+    .signup-form-wrapper .auth-back-link {
+        margin-top: 5px;
+    }
+}
+
+/* =========================================================
+   MOBILE — 600px AND BELOW
+========================================================= */
+
+@media (max-width: 600px) {
+    .signup-form-wrapper {
+        max-width: 420px;
+        padding-block: 3px;
+    }
+
+    .signup-form-wrapper .auth-heading {
+        margin-bottom: 12px;
+    }
+
+    .signup-form-wrapper .auth-heading h2 {
+        font-size: 25px;
+    }
+
+    .signup-form {
+        gap: 9px;
+    }
+
+    .signup-form .auth-field {
+        gap: 4px;
+    }
+
+    .signup-form .auth-field input {
+        height: 39px;
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .signup-form .auth-field label {
+        font-size: 12px;
+    }
+
+    .signup-form .auth-password input {
+        padding-inline-end: 55px;
+    }
+
+    .signup-terms span {
+        font-size: 10px;
+    }
+
+    .signup-form-wrapper .auth-switch {
+        margin-top: 8px;
+        font-size: 11px;
+    }
+
+    .signup-form-wrapper .auth-back-link {
+        margin-top: 5px;
+        font-size: 11px;
+    }
+}
+
+/* =========================================================
+   SHORT SCREENS
+========================================================= */
+
+@media (max-height: 760px) {
+    .signup-form-wrapper {
+        padding-block: 2px;
+    }
+
+    .signup-form-wrapper .auth-heading {
+        margin-bottom: 9px;
+    }
+
+    .signup-form-wrapper .auth-heading h2 {
+        margin-block: 5px;
+        font-size: 23px;
+    }
+
+    .signup-form-wrapper .auth-heading p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .signup-form {
+        gap: 7px;
+    }
+
+    .signup-form .auth-field {
+        gap: 3px;
+    }
+
+    .signup-form .auth-field input {
+        height: 35px;
+        padding-block: 6px;
+    }
+
+    .signup-form-wrapper .auth-switch {
+        margin-top: 6px;
+    }
+
+    .signup-form-wrapper .auth-back-link {
+        margin-top: 4px;
+    }
+}
+
+@media (max-height: 620px) {
+    .signup-form-wrapper .auth-eyebrow {
+        font-size: 9px;
+    }
+
+    .signup-form-wrapper .auth-heading {
+        margin-bottom: 6px;
+    }
+
+    .signup-form-wrapper .auth-heading h2 {
+        font-size: 21px;
+    }
+
+    .signup-form-wrapper .auth-heading p {
+        display: none;
+    }
+
+    .signup-form {
+        gap: 5px;
+    }
+
+    .signup-form .auth-field input {
+        height: 32px;
+    }
+
+    .signup-terms span {
+        font-size: 9px;
+    }
+
+    .signup-form-wrapper .auth-switch,
+    .signup-form-wrapper .auth-back-link,
+    .signup-form-wrapper + .auth-copyright {
+        margin-top: 3px;
+    }
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .signup-terms {
+    text-align: right;
+}
+
+html[dir="rtl"] .signup-form .auth-password__toggle {
+    right: auto;
+    left: 12px;
+}
+
+html[dir="rtl"] .signup-form .auth-password input {
+    padding-inline: 13px 58px;
+}
+
+
+/* ==========================================
+   SIGNUP SOCIAL BUTTONS
+========================================== */
+
+.signup-social-divider {
+    margin: 10px 0 6px;
+}
+
+.signup-form .auth-social-button {
+    min-height: 36px;
+    margin-top: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+}
+
+.signup-form .auth-social-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ==========================================
+   SCREEN-FIT SIGNUP PAGE
+========================================== */
+
+.auth-page:has(.signup-form) {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.auth-page:has(.signup-form) .auth-layout {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.auth-page:has(.signup-form) .auth-panel {
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.auth-page:has(.signup-form) .auth-form-wrapper {
+    width: 100%;
+    max-width: 430px;
+    min-height: 0;
+    padding: 8px 24px;
+    margin-inline: auto;
+}
+
+.auth-page:has(.signup-form) .signup-form-wrapper .auth-heading {
+    margin-bottom: 9px;
+}
+
+.auth-page:has(.signup-form) .signup-form-wrapper .auth-heading h2 {
+    margin-block: 5px;
+    font-size: 24px;
+}
+
+.auth-page:has(.signup-form) .signup-form-wrapper .auth-heading p {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.auth-page:has(.signup-form) .signup-form {
+    gap: 7px;
+}
+
+.auth-page:has(.signup-form) .signup-form .auth-field {
+    gap: 3px;
+}
+
+.auth-page:has(.signup-form) .signup-form .auth-field label {
+    font-size: 11px;
+}
+
+.auth-page:has(.signup-form) .signup-form .auth-field input {
+    height: 34px;
+    min-height: 34px;
+    padding-block: 6px;
+    font-size: 12px;
+}
+
+.auth-page:has(.signup-form) .signup-form .auth-password input {
+    padding-inline-end: 54px;
+}
+
+.auth-page:has(.signup-form) .signup-terms {
+    gap: 6px;
+    margin-top: 1px;
+}
+
+.auth-page:has(.signup-form) .signup-terms span {
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+.auth-page:has(.signup-form) .signup-form .auth-submit {
+    min-height: 36px;
+    padding-block: 8px;
+}
+
+.auth-page:has(.signup-form) .signup-form-wrapper .auth-switch {
+    margin-block: 8px 0;
+    font-size: 11px;
+}
+
+.auth-page:has(.signup-form) .signup-form-wrapper .auth-back-link {
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.auth-page:has(.signup-form) .auth-copyright {
+    margin-block: 4px;
+    font-size: 10px;
+}
+
+/* ==========================================
+   TABLET — 768px
+========================================== */
+
+@media (max-width: 768px) {
+    .auth-page:has(.signup-form) .auth-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-page:has(.signup-form) .auth-visual {
+        display: none;
+    }
+
+    .auth-page:has(.signup-form) .auth-panel {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .auth-page:has(.signup-form) .auth-panel__top {
+        padding-inline: 20px;
+    }
+
+    .auth-page:has(.signup-form) .auth-form-wrapper {
+        max-width: 410px;
+        padding: 5px 22px;
+    }
+}
+
+/* ==========================================
+   MOBILE — 360px
+========================================== */
+
+@media (max-width: 400px) {
+    .auth-page:has(.signup-form) .auth-panel {
+        padding-block: 5px;
+    }
+
+    .auth-page:has(.signup-form) .auth-panel__top {
+        padding-inline: 14px;
+    }
+
+    .auth-page:has(.signup-form) .auth-form-wrapper {
+        padding-inline: 18px;
+    }
+
+    .auth-page:has(.signup-form) .signup-form-wrapper .auth-heading h2 {
+        font-size: 22px;
+    }
+
+    .auth-page:has(.signup-form) .signup-form {
+        gap: 5px;
+    }
+
+    .auth-page:has(.signup-form) .signup-form .auth-field input {
+        height: 31px;
+        min-height: 31px;
+        padding-block: 5px;
+    }
+
+    .auth-page:has(.signup-form) .signup-social-divider {
+        margin-block: 6px 3px;
+    }
+
+    .auth-page:has(.signup-form) .signup-form .auth-social-button {
+        min-height: 31px;
+        margin-top: 4px;
+        padding-block: 5px;
+    }
+
+    .auth-page:has(.signup-form) .signup-form-wrapper .auth-switch {
+        margin-top: 5px;
+    }
+}
+
+/* Short viewport: prioritize fitting all fields */
+@media (max-height: 760px) {
+    .auth-page:has(.signup-form) .auth-panel__top {
+        min-height: 36px;
+    }
+
+    .auth-page:has(.signup-form) .auth-form-wrapper {
+        padding-block: 3px;
+    }
+
+    .auth-page:has(.signup-form) .signup-form-wrapper .auth-heading {
+        margin-bottom: 5px;
+    }
+
+    .auth-page:has(.signup-form) .signup-form-wrapper .auth-heading p {
+        display: none;
+    }
+
+    .auth-page:has(.signup-form) .signup-form .auth-field input {
+        height: 30px;
+        min-height: 30px;
+    }
+
+    .auth-page:has(.signup-form) .signup-form .auth-social-button {
+        min-height: 30px;
+    }
+
+    .auth-page:has(.signup-form) .signup-terms span {
+        font-size: 9px;
+    }
+}
+
+/* RTL password toggle */
+html[dir="rtl"] .auth-page:has(.signup-form) .auth-password__toggle {
+    right: auto;
+    left: 12px;
+}
+
+

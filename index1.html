@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#FAF7F2">
+    <meta name="description" content="Discover personalized dermatology and skincare at ELARA. Expert guidance for healthier-looking skin.">
+
+    <title>ELARA | Expert Skin &amp; Dermatology Care</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+
+    <!-- Home hero styles -->
+    <link rel="stylesheet" href="./home1.css">
+
+    <!-- Global interactions -->
+    <script src="./assets/js/global.js" defer></script>
+</head>
+
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header" id="site-header">
+        <div class="section-container site-header__container">
+
+            <!-- Brand: always at the start of the header -->
+            <a href="./index.html"
+               class="brand-logo"
+               aria-label="ELARA home">
+
+                <span class="brand-logo__mark" aria-hidden="true">
+                    <i data-lucide="flower-2"></i>
+                </span>
+
+                <span class="brand-logo__content">
+                    <span class="brand-logo__name">ELARA</span>
+                    <span class="brand-logo__tagline">SKIN CLINIC</span>
+                </span>
+            </a>
+
+            <!-- Mobile menu toggle -->
+            <button class="mobile-menu-toggle"
+                    id="mobile-menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="primary-navigation"
+                    aria-expanded="false">
+                <i data-lucide="menu" class="menu-open-icon"></i>
+                <i data-lucide="x" class="menu-close-icon"></i>
+            </button>
+
+            <!-- Navigation and header actions -->
+            <div class="header-panel" id="header-panel">
+
+                <nav class="primary-navigation"
+                     id="primary-navigation"
+                     aria-label="Main navigation">
+
+                    <a href="./index.html" class="nav-link is-active"
+                       aria-current="page">Home</a>
+                    <a href="./treatments.html" class="nav-link">Treatments</a>
+                    <a href="./doctors.html" class="nav-link">Doctors</a>
+                    <a href="./about.html" class="nav-link">About</a>
+                    <a href="./contact.html" class="nav-link">Contact</a>
+                    <a href="./dashboard.html" class="nav-link">Dashboard</a>
+                </nav>
+
+                <div class="header-actions">
+
+                    <!-- Text-only RTL control -->
+                    <button class="header-control rtl-toggle"
+                            id="rtl-toggle"
+                            type="button"
+                            aria-pressed="false">
+                        RTL
+                    </button>
+
+                    <button class="header-control theme-toggle"
+                            id="theme-toggle"
+                            type="button"
+                            aria-label="Switch to dark mode"
+                            aria-pressed="false">
+                        <i data-lucide="moon" class="theme-icon-dark"></i>
+                        <i data-lucide="sun" class="theme-icon-light"></i>
+                        <span class="theme-toggle__label">Dark Mode</span>
+                    </button>
+
+                    <a href="./login.html" class="login-button">
+                        <span>Login</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= HOME HERO ================= -->
+        <section class="home-hero" id="home-hero"
+                 aria-labelledby="hero-title">
+
+            <div class="section-container home-hero__container">
+
+                <!-- Left: editorial content -->
+                <div class="home-hero__content">
+
+                    <div class="hero-eyebrow">
+                        <span class="hero-eyebrow__line"></span>
+                        <span>PERSONALIZED DERMATOLOGY CARE</span>
+                    </div>
+
+                    <h1 class="home-hero__title" id="hero-title">
+                        Your skin deserves
+                        <span>expert care.</span>
+                    </h1>
+
+                    <p class="home-hero__description">
+                        Discover a more confident you through personalized
+                        dermatology care, thoughtful guidance, and treatments
+                        designed around your skin.
+                    </p>
+
+                    <div class="home-hero__actions">
+                        <a href="./appointments.html"
+                           class="hero-button hero-button--primary">
+                            <span>Book Appointment</span>
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+
+                        <a href="./treatments.html"
+                           class="hero-button hero-button--secondary">
+                            <span>Explore Treatments</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <span class="hero-trust__icon">
+                            <i data-lucide="heart-pulse"></i>
+                        </span>
+
+                        <div class="hero-trust__content">
+                            <span class="hero-trust__title">
+                                Care that puts you first
+                            </span>
+                            <span class="hero-trust__description">
+                                Personalized attention. Professional guidance.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: dermatologist consultation image -->
+                <div class="home-hero__visual">
+
+                    <div class="hero-image-frame">
+                        <img
+                            class="hero-image"
+                            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+                            alt="Medical professional consulting a patient in a clinical setting"
+                            fetchpriority="high"
+                        >
+                    </div>
+
+                    <div class="hero-image-accent" aria-hidden="true"></div>
+
+                    <div class="hero-image-caption">
+                        <span class="hero-image-caption__icon">
+                            <i data-lucide="stethoscope"></i>
+                        </span>
+
+                        <div class="hero-image-caption__content">
+                            <span class="hero-image-caption__title">
+                                Your skin, understood
+                            </span>
+                            <span class="hero-image-caption__text">
+                                A more personal approach to skin health
+                            </span>
+                        </div>
+                    </div>
+
+                    <span class="hero-image-index" aria-hidden="true">
+                        01 <span></span> SKINCARE, REIMAGINED
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="hero-bottom-note" aria-hidden="true">
+                <span class="hero-bottom-note__line"></span>
+                <span>CARE • CONFIDENCE • WELLNESS</span>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+/* =========================================================
+   ELARA — GLOBAL INTERACTIONS
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+    "use strict";
+
+    const root = document.documentElement;
+
+    const siteHeader = document.getElementById("site-header");
+    const menuToggle = document.getElementById("mobile-menu-toggle");
+    const headerPanel = document.getElementById("header-panel");
+
+    const themeToggle = document.getElementById("theme-toggle");
+    const rtlToggle = document.getElementById("rtl-toggle");
+
+    /* =====================================================
+       SAFE PREFERENCE STORAGE
+    ===================================================== */
+
+    function readPreference(key) {
+        try {
+            return localStorage.getItem(key);
+        } catch (error) {
+            return null;
+        }
+    }
+
+    function savePreference(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (error) {
+            // The interface remains functional if storage is unavailable.
+        }
+    }
+
+    /* =====================================================
+       LUCIDE ICON INITIALIZATION
+    ===================================================== */
+
+    function refreshIcons() {
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    }
+
+    refreshIcons();
+
+    /* =====================================================
+       DARK MODE
+    ===================================================== */
+
+    function applyTheme(theme) {
+        const isDark = theme === "dark";
+
+        root.dataset.theme = isDark ? "dark" : "light";
+
+        if (themeToggle) {
+            themeToggle.setAttribute(
+                "aria-pressed",
+                String(isDark)
+            );
+
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+
+            const label = themeToggle.querySelector(
+                ".theme-toggle__label"
+            );
+
+            if (label) {
+                label.textContent = isDark ? "Light Mode" : "Dark Mode";
+            }
+        }
+
+        savePreference("derma-care-theme", root.dataset.theme);
+    }
+
+    const savedTheme = readPreference("derma-care-theme");
+
+    applyTheme(savedTheme === "dark" ? "dark" : "light");
+
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+            const nextTheme =
+                root.dataset.theme === "dark" ? "light" : "dark";
+
+            applyTheme(nextTheme);
+        });
+    }
+
+    /* =====================================================
+       RTL / LTR TOGGLE
+    ===================================================== */
+
+    function applyDirection(direction) {
+        const isRTL = direction === "rtl";
+
+        root.setAttribute("dir", isRTL ? "rtl" : "ltr");
+
+        if (rtlToggle) {
+            rtlToggle.setAttribute(
+                "aria-pressed",
+                String(isRTL)
+            );
+
+            // The control remains text-only, as requested.
+            rtlToggle.textContent = "RTL";
+        }
+
+        document.querySelectorAll("[data-directional-label]").forEach(
+            function (element) {
+                element.textContent = isRTL
+                    ? element.dataset.rtlLabel || element.textContent
+                    : element.dataset.ltrLabel || element.textContent;
+            }
+        );
+
+        savePreference("derma-care-direction", root.dir);
+    }
+
+    const savedDirection = readPreference("derma-care-direction");
+
+    applyDirection(savedDirection === "rtl" ? "rtl" : "ltr");
+
+    if (rtlToggle) {
+        rtlToggle.addEventListener("click", function () {
+            const nextDirection =
+                root.dir === "rtl" ? "ltr" : "rtl";
+
+            applyDirection(nextDirection);
+        });
+    }
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    function closeMenu() {
+        if (!siteHeader || !menuToggle) {
+            return;
+        }
+
+        siteHeader.classList.remove("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+    function toggleMenu() {
+        if (!siteHeader || !menuToggle) {
+            return;
+        }
+
+        const isOpen = siteHeader.classList.toggle("menu-open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    }
+
+    if (menuToggle && headerPanel) {
+        menuToggle.addEventListener("click", toggleMenu);
+
+        headerPanel.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("click", function (event) {
+            if (
+                siteHeader &&
+                !siteHeader.contains(event.target)
+            ) {
+                closeMenu();
+            }
+        });
+
+        /* Close the mobile menu when returning to desktop width. */
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 1024) {
+                closeMenu();
+            }
+        });
+    }
+});
+
+    </script>
+</body>
+</html>

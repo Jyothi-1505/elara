@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELARA — Shared Layout</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body>
+
+    <!-- GLOBAL HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+
+            <a href="index.html" class="brand-logo" aria-label="ELARA home">
+                <img src="assets/images/logo.png" alt="Clinic emblem">
+                <span class="brand-name">
+                    <span class="brand-title">ELARA</span>
+                    <span class="brand-subtitle">SKIN CLINIC</span>
+                </span>
+            </a>
+
+            <button class="mobile-menu-toggle icon-button"
+                    id="mobileMenuToggle"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation"
+                 aria-label="Main navigation">
+                <ul class="navigation-list">
+
+                    <li class="nav-item home-dropdown">
+                        <a href="index.html" class="nav-link home-link"
+                           aria-haspopup="true" aria-expanded="false">
+                            Home <i data-lucide="chevron-down"></i>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Home 1 — Classic</a></li>
+                            <li><a href="home2.html">Home 2 — Premium</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="treatments.html" class="nav-link">Treatments</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="doctors.html" class="nav-link">Doctors</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    </li>
+
+                </ul>
+
+                <div class="header-actions">
+
+                    <button class="icon-button rtl-toggle" id="rtlToggle"
+                            type="button" aria-label="Switch to RTL"
+                            aria-pressed="false" title="Toggle RTL">
+                        <i data-lucide="languages"></i>
+                    </button>
+
+                    <button class="icon-button theme-toggle" id="themeToggle"
+                            type="button" aria-label="Switch to dark mode"
+                            title="Toggle dark mode">
+                        <i data-lucide="moon"></i>
+                    </button>
+
+                    <a href="login.html" class="btn btn-primary header-cta">
+                        <i data-lucide="calendar-check"></i>
+                        <span>Book Appointment</span>
+                    </a>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="global-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo footer-logo">
+                        <img src="assets/images/logo.png" alt="">
+                        <span class="brand-name">
+                            <span class="brand-title">ELARA</span>
+                            <span class="brand-subtitle">SKIN CLINIC</span>
+                        </span>
+                    </a>
+
+                    <p class="footer-description">
+                        Thoughtful dermatological care, personalized treatments,
+                        and expert guidance for healthier skin.
+                    </p>
+
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Treatments</h3>
+                    <ul class="footer-links">
+                        <li><a href="treatments.html#acne-care">Acne Care</a></li>
+                        <li><a href="treatments.html#laser-therapy">Laser Therapy</a></li>
+                        <li><a href="treatments.html#anti-aging">Anti-Aging</a></li>
+                        <li><a href="treatments.html#pigmentation">Pigmentation Care</a></li>
+                        <li><a href="treatments.html#skin-rejuvenation">Skin Rejuvenation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3 class="footer-heading">Get in Touch</h3>
+
+                    <p><i data-lucide="map-pin"></i>
+                        <span>Your clinic address goes here</span>
+                    </p>
+
+                    <p><i data-lucide="phone"></i>
+                        <a href="tel:+910000000000">+91 00000 00000</a>
+                    </p>
+
+                    <p><i data-lucide="mail"></i>
+                        <a href="mailto:hello@example.com">hello@example.com</a>
+                    </p>
+
+                    <a href="login.html" class="btn btn-secondary footer-cta">
+                        Contact Our Clinic
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="currentYear"></span>
+                    ELARA Skin Clinic. All rights reserved.
+                </p>
+
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

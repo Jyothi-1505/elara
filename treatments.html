@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#7D3544">
+
+    <meta name="description"
+          content="Explore personalized dermatology treatments, expert doctors, and thoughtful skin care at ELARA Skin Clinic.">
+
+    <title>Home 1 — ELARA Skin Clinic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/treatments.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./assets/js/global.js" defer></script>
+    <!-- <script src="./assets/js/treatments.js" defer></script> -->
+</head>
+
+<body>
+
+    
+<header class="site-header">
+    <div class="global-container header-inner">
+
+        <!-- LEFT: LOGO AND CLINIC NAME -->
+        <a href="index.html" class="brand-logo">
+            <img src="./images/logo/logo.png" alt="ELARA logo">
+
+            <span class="brand-name">
+                <span class="brand-title">ELARA</span>
+                <span class="brand-subtitle">SKIN CLINIC</span>
+            </span>
+        </a>
+
+        <!-- MOBILE MENU -->
+        <button class="mobile-menu-toggle icon-button"
+                id="mobileMenuToggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            <i data-lucide="menu"></i>
+        </button>
+
+        <!-- CENTER: NAVIGATION AND RIGHT: ACTIONS -->
+        <nav class="main-navigation" id="mainNavigation">
+
+            <ul class="navigation-list">
+
+                <li class="nav-item home-dropdown">
+                    <a class="nav-link home-link">
+                        Home
+                        <i data-lucide="chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1 — Classic</a></li>
+                        <li><a href="home2.html">Home 2 — Premium</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="treatments.html" class="nav-link">Treatments</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="doctors.html" class="nav-link">Doctors</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+
+            </ul>
+
+            <!-- RIGHT: ACTION BUTTONS -->
+            <div class="header-actions">
+
+                <button class="icon-button" id="rtlToggle" type="button" aria-label="Toggle RTL">
+    RTL
+</button>
+
+                <button class="icon-button theme-toggle"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <a href="login.html" class="btn btn-primary header-cta">
+                    <i data-lucide="user-round"></i>
+                    <span>Login</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+</header>
+
+
+
+<main class="treatments-page">
+
+    
+<!-- TREATMENTS PAGE — EDITORIAL HERO -->
+<section class="treatment-hero" id="treatment-hero">
+
+    <div class="treatment-hero__background">
+        <img
+            src="https://i.pinimg.com/736x/8f/72/c4/8f72c42938025bcaf334c04c3cc24e6f.jpg"
+            alt="Professional facial treatment in a calm dermatology clinic"
+            fetchpriority="high">
+    </div>
+
+    <div class="treatment-hero__overlay"></div>
+
+    <div class="global-container treatment-hero__content">
+
+        <div class="treatment-hero__copy">
+            <span class="treatment-hero__eyebrow">
+                <span></span>
+                DISCOVER YOUR SKIN'S POSSIBILITIES
+            </span>
+
+            <h1>
+                Thoughtful treatments.
+                <em>Confident skin.</em>
+            </h1>
+
+            <p>
+                Explore personalized dermatological care guided by
+                professional expertise, your individual concerns,
+                and a considered approach to skin health.
+            </p>
+
+            <div class="treatment-hero__actions">
+                <a href="#treatment-directory" class="btn btn-primary">
+                    Explore Treatments
+                    <i data-lucide="arrow-down-right"></i>
+                </a>
+
+                <a href="login.html" class="treatment-hero__secondary">
+                    Book a Consultation
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="treatment-hero__bottom">
+            <span class="treatment-hero__bottom-label">
+                PERSONALIZED DERMATOLOGY
+            </span>
+
+            <span class="treatment-hero__bottom-line"></span>
+
+            <span class="treatment-hero__bottom-note">
+                CARE THAT STARTS WITH YOU
+            </span>
+
+            <a href="#treatment-directory"
+               class="treatment-hero__scroll"
+               aria-label="Scroll to explore treatments">
+                <i data-lucide="arrow-down"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <span class="treatment-hero__index" aria-hidden="true">
+        D / 01
+    </span>
+
+</section>
+
+    <!-- 1. EDITORIAL INTRODUCTION -->
+    <section class="treatment-intro">
+        <div class="global-container treatment-intro__grid">
+            <div class="treatment-intro__heading">
+                <span class="section-eyebrow">DERMATOLOGY, THOUGHTFULLY DELIVERED</span>
+                <h1>Care for your skin.<br><em>Designed around you.</em></h1>
+            </div>
+
+            <div class="treatment-intro__description">
+                <span class="treatment-intro__index">01 — OUR TREATMENTS</span>
+                <p>
+                    Every skin concern deserves attention. Explore our
+                    dermatology services and discover care options
+                    to discuss with your skin specialist.
+                </p>
+                <a href="#treatment-directory" class="treatment-text-link">
+                    Explore treatments
+                    <i data-lucide="arrow-down-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="global-container treatment-intro__image-wrap">
+            <div class="treatment-intro__image">
+                <img
+                    src="./images/treatments/section-2.jpg"
+                    alt="Professional skincare treatment in a clinical setting"
+                    fetchpriority="high">
+            </div>
+            <span class="treatment-intro__image-caption">
+                PERSONALIZED CARE · PROFESSIONAL GUIDANCE
+            </span>
+        </div>
+    </section>
+
+
+    <!-- 2. EXPLORE BY CONCERN -->
+    <section class="concern-section" id="treatment-directory">
+        <div class="global-container">
+            <div class="treatment-section-heading">
+                <div>
+                    <span class="section-eyebrow">START WITH YOUR CONCERN</span>
+                    <h2>What would you like to <em>address?</em></h2>
+                </div>
+                <p>
+                    Browse common skin concerns to find relevant services
+                    to discuss during your consultation.
+                </p>
+            </div>
+
+            <div class="concern-list">
+                <a href="#acne-care" class="concern-item">
+                    <span class="concern-item__number">01</span>
+                    <span class="concern-item__title">Acne & Breakouts</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="#pigmentation-care" class="concern-item">
+                    <span class="concern-item__number">02</span>
+                    <span class="concern-item__title">Pigmentation & Uneven Tone</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="#aging-care" class="concern-item">
+                    <span class="concern-item__number">03</span>
+                    <span class="concern-item__title">Skin Texture & Aging</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="#sensitive-care" class="concern-item">
+                    <span class="concern-item__number">04</span>
+                    <span class="concern-item__title">Sensitive Skin</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="#skin-consultation" class="concern-item">
+                    <span class="concern-item__number">05</span>
+                    <span class="concern-item__title">General Skin Health</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 3. FEATURED TREATMENTS -->
+    <section class="featured-treatments">
+        <div class="global-container">
+            <div class="treatment-section-heading">
+                <div>
+                    <span class="section-eyebrow">EXPLORE YOUR OPTIONS</span>
+                    <h2>Thoughtful care for <em>different needs.</em></h2>
+                </div>
+                <span class="treatment-heading-note">02 / SERVICES</span>
+            </div>
+
+            <!-- Acne -->
+            <article class="treatment-feature" id="acne-care">
+                <div class="treatment-feature__image">
+                    <img
+                        src="./images/treatments/1.jpg"
+                        alt="Professional skincare treatment"
+                        loading="lazy">
+                    <span class="treatment-feature__image-number">01</span>
+                </div>
+
+                <div class="treatment-feature__content">
+                    <span class="treatment-feature__category">SKIN CONCERNS</span>
+                    <h3>Acne & Breakout Care</h3>
+                    <p>
+                        Understand possible causes of breakouts and explore
+                        suitable care options based on your skin and medical
+                        assessment.
+                    </p>
+                    <ul class="treatment-feature__points">
+                        <li>Individual skin assessment</li>
+                        <li>Personalized care recommendations</li>
+                        <li>Guidance on ongoing skin care</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-primary">
+                        Book a Consultation
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Pigmentation -->
+            <article class="treatment-feature treatment-feature--reverse"
+                     id="pigmentation-care">
+                <div class="treatment-feature__image">
+                    <img
+                        src="./images/treatments/2.jpg"
+                        alt="Skincare products in a calm clinical setting"
+                        loading="lazy">
+                    <span class="treatment-feature__image-number">02</span>
+                </div>
+
+                <div class="treatment-feature__content">
+                    <span class="treatment-feature__category">SKIN TONE</span>
+                    <h3>Pigmentation & Uneven Tone</h3>
+                    <p>
+                        Explore professional assessment and suitable options
+                        for concerns such as dark spots and uneven skin tone.
+                    </p>
+                    <ul class="treatment-feature__points">
+                        <li>Assessment of pigmentation concerns</li>
+                        <li>Discussion of available treatment options</li>
+                        <li>Practical skin-care guidance</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-primary">
+                        Book a Consultation
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Aging and texture -->
+            <article class="treatment-feature" id="aging-care">
+                <div class="treatment-feature__image">
+                    <img
+                        src="./images/treatments/3.jpg"
+                        alt="Facial treatment in a professional skin-care setting"
+                        loading="lazy">
+                    <span class="treatment-feature__image-number">03</span>
+                </div>
+
+                <div class="treatment-feature__content">
+                    <span class="treatment-feature__category">SKIN TEXTURE</span>
+                    <h3>Texture & Visible Signs of Aging</h3>
+                    <p>
+                        Discuss changes in skin texture, fine lines, and other
+                        concerns with a qualified skin-care professional.
+                    </p>
+                    <ul class="treatment-feature__points">
+                        <li>Skin condition assessment</li>
+                        <li>Options tailored to individual needs</li>
+                        <li>Ongoing care recommendations</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-primary">
+                        Book a Consultation
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Sensitive skin -->
+            <article class="treatment-feature treatment-feature--reverse"
+                     id="sensitive-care">
+                <div class="treatment-feature__image">
+                    <img
+                        src="./images/treatments/4.jpg"
+                        alt="Gentle skin-care products"
+                        loading="lazy">
+                    <span class="treatment-feature__image-number">04</span>
+                </div>
+
+                <div class="treatment-feature__content">
+                    <span class="treatment-feature__category">SKIN COMFORT</span>
+                    <h3>Sensitive Skin & Irritation</h3>
+                    <p>
+                        Seek guidance for recurring sensitivity, irritation,
+                        or dryness and discuss appropriate next steps.
+                    </p>
+                    <ul class="treatment-feature__points">
+                        <li>Discussion of symptoms and triggers</li>
+                        <li>Professional assessment where appropriate</li>
+                        <li>Guidance on skin-care routines</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-primary">
+                        Book a Consultation
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- General skin health -->
+            <article class="treatment-feature" id="skin-consultation">
+                <div class="treatment-feature__image">
+                    <img
+                        src="./images/treatments/5.jpg"
+                        alt="Medical professional ready for a consultation"
+                        loading="lazy">
+                    <span class="treatment-feature__image-number">05</span>
+                </div>
+
+                <div class="treatment-feature__content">
+                    <span class="treatment-feature__category">PERSONALIZED CARE</span>
+                    <h3>General Skin Consultation</h3>
+                    <p>
+                        Start with a conversation about your skin concerns,
+                        medical history, current routine, and goals.
+                    </p>
+                    <ul class="treatment-feature__points">
+                        <li>Discuss your individual concerns</li>
+                        <li>Understand suitable next steps</li>
+                        <li>Receive professional guidance</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-primary">
+                        Book a Consultation
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- 4. PERSONALIZED CARE PROCESS -->
+    <section class="treatment-process">
+        <div class="global-container">
+            <div class="treatment-process__intro">
+                <span class="section-eyebrow">CARE THAT STARTS WITH LISTENING</span>
+                <h2>Your skin. Your concerns.<br><em>A considered approach.</em></h2>
+                <p>
+                    Treatment recommendations depend on your individual
+                    needs and professional assessment.
+                </p>
+            </div>
+
+            <div class="treatment-process__steps">
+                <article>
+                    <span>01</span>
+                    <i data-lucide="messages-square"></i>
+                    <h3>Talk</h3>
+                    <p>Share your concerns and what you hope to address.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <i data-lucide="scan-face"></i>
+                    <h3>Assess</h3>
+                    <p>Discuss your skin with a qualified professional.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <i data-lucide="clipboard-check"></i>
+                    <h3>Plan</h3>
+                    <p>Explore appropriate options and aftercare guidance.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 5. TREATMENT FAQ -->
+    <section class="treatment-faq">
+        <div class="global-container treatment-faq__grid">
+            <div class="treatment-faq__intro">
+                <span class="section-eyebrow">GOOD TO KNOW</span>
+                <h2>Questions before <em>your visit?</em></h2>
+                <p>
+                    Here are a few things to know before discussing
+                    treatment options with our team.
+                </p>
+                <a href="contact.html" class="treatment-text-link">
+                    Contact our team
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="treatment-faq__list">
+                <details>
+                    <summary>
+                        How do I know which treatment is right for me?
+                        <i data-lucide="plus"></i>
+                    </summary>
+                    <p>
+                        A consultation helps a qualified professional
+                        understand your concerns and discuss suitable
+                        options. The right approach varies by individual.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        Do I need a consultation before treatment?
+                        <i data-lucide="plus"></i>
+                    </summary>
+                    <p>
+                        Assessment may be needed before recommending a
+                        treatment. Contact the clinic to understand the
+                        consultation process for your concern.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        Will I receive aftercare guidance?
+                        <i data-lucide="plus"></i>
+                    </summary>
+                    <p>
+                        Aftercare recommendations depend on the treatment
+                        and your individual needs. Ask your provider about
+                        care instructions and any follow-up visits.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        Can I discuss more than one skin concern?
+                        <i data-lucide="plus"></i>
+                    </summary>
+                    <p>
+                        Yes. Share your concerns when arranging your
+                        consultation so the team can advise you about
+                        the appropriate assessment.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- KEEP YOUR EXISTING COMMON CTA HERE -->
+    <!-- Copy the shared CTA from index.html without changing it. -->
+
+
+    
+<!-- TREATMENTS PAGE — PREMIUM CTA -->
+<section class="treatments-cta" id="treatments-cta">
+    <div class="global-container">
+        <div class="treatments-cta__inner">
+
+            <div class="treatments-cta__index" aria-hidden="true">
+                <span>03</span>
+                <span class="treatments-cta__index-line"></span>
+                <span>YOUR NEXT STEP</span>
+            </div>
+
+            <div class="treatments-cta__main">
+                <span class="section-eyebrow">
+                    A MORE PERSONAL APPROACH
+                </span>
+
+                <h2>
+                    Your skin deserves<br>
+                    <em>considered care.</em>
+                </h2>
+
+                <p>
+                    Start with a conversation. We'll help you explore
+                    the next steps for your individual skin concerns.
+                </p>
+            </div>
+
+            <div class="treatments-cta__action">
+                <a href="login.html" class="btn btn-primary">
+                    Arrange a Consultation
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="contact.html" class="treatments-cta__contact">
+                    Have a question?
+                    <span>Talk to our team</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+
+            <span class="treatments-cta__watermark" aria-hidden="true">
+                CARE
+            </span>
+
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+
+    
+<!-- =========================================
+     GLOBAL FOOTER
+========================================== -->
+
+<footer class="site-footer" id="siteFooter">
+
+    <div class="global-container">
+
+        <div class="footer-main">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand-logo footer-logo">
+                    <img src="./images/logo/logo.png"
+                         alt="ELARA logo">
+
+                    <span class="brand-name">
+                        <span class="brand-title">ELARA</span>
+                        <span class="brand-subtitle">SKIN CLINIC</span>
+                    </span>
+                </a>
+
+                <p class="footer-description">
+                    Thoughtful dermatological care, personalized treatments,
+                    and expert guidance for healthier skin.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#" class="social-link"
+                       aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="social-link"
+                       aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="social-link"
+                       aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+
+                <h3 class="footer-heading">Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="treatments.html">Treatments</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- TREATMENTS -->
+            <div class="footer-column">
+
+                <h3 class="footer-heading">Our Treatments</h3>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="treatments.html#acne-care">Acne Care</a>
+                    </li>
+                    <li>
+                        <a href="treatments.html#laser-therapy">Laser Therapy</a>
+                    </li>
+                    <li>
+                        <a href="treatments.html#anti-aging">Anti-Aging</a>
+                    </li>
+                    <li>
+                        <a href="treatments.html#pigmentation">
+                            Pigmentation Care
+                        </a>
+                    </li>
+                    <li>
+                        <a href="treatments.html#skin-rejuvenation">
+                            Skin Rejuvenation
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="footer-column footer-contact">
+
+                <h3 class="footer-heading">Get in Touch</h3>
+
+                <p>
+                    <i data-lucide="map-pin"></i>
+                    <span>Your clinic address goes here</span>
+                </p>
+
+                <p>
+                    <i data-lucide="phone"></i>
+                    <a href="tel:+910000000000">+91 00000 00000</a>
+                </p>
+
+                <p>
+                    <i data-lucide="mail"></i>
+                    <a href="mailto:hello@example.com">
+                        hello@example.com
+                    </a>
+                </p>
+
+                <a href="login.html" class="btn btn-secondary footer-cta">
+                    Patient Login
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p class="copyright-text">
+                &copy; <span class="current-year"></span>
+                ELARA Skin Clinic. All rights reserved.
+            </p>
+
+            <div class="footer-legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+document.querySelectorAll(".current-year").forEach(function (element) {
+    element.textContent = new Date().getFullYear();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#7D3544">
+
+    <meta name="description"
+          content="Explore personalized dermatology treatments, expert doctors, and thoughtful skin care at ELARA Skin Clinic.">
+
+    <title>Home 1 — ELARA Skin Clinic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/doctors.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./assets/js/global.js" defer></script>
+    <!-- <script src="./assets/js/home.js" defer></script> -->
+</head>
+
+<body>
+
+    
+<header class="site-header">
+    <div class="global-container header-inner">
+
+        <!-- LEFT: LOGO AND CLINIC NAME -->
+        <a href="index.html" class="brand-logo">
+            <img src="./images/logo/logo.png" alt="ELARA logo">
+
+            <span class="brand-name">
+                <span class="brand-title">ELARA</span>
+                <span class="brand-subtitle">SKIN CLINIC</span>
+            </span>
+        </a>
+
+        <!-- MOBILE MENU -->
+        <button class="mobile-menu-toggle icon-button"
+                id="mobileMenuToggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            <i data-lucide="menu"></i>
+        </button>
+
+        <!-- CENTER: NAVIGATION AND RIGHT: ACTIONS -->
+        <nav class="main-navigation" id="mainNavigation">
+
+            <ul class="navigation-list">
+
+                <li class="nav-item home-dropdown">
+                    <a class="nav-link home-link">
+                        Home
+                        <i data-lucide="chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Home 1 — Classic</a></li>
+                        <li><a href="home2.html">Home 2 — Premium</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="treatments.html" class="nav-link">Treatments</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="doctors.html" class="nav-link">Doctors</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+
+            </ul>
+
+            <!-- RIGHT: ACTION BUTTONS -->
+            <div class="header-actions">
+
+                <button class="icon-button" id="rtlToggle" type="button" aria-label="Toggle RTL">
+    RTL
+</button>
+
+                <button class="icon-button theme-toggle"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <a href="login.html" class="btn btn-primary header-cta">
+                    <i data-lucide="user-round"></i>
+                    <span>Login</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+</header>
+
+
+
+
+<main class="doctors-page">
+
+    <!-- SECTION 1: EDITORIAL INTRODUCTION -->
+    <section class="doctors-intro">
+        <div class="global-container doctors-intro__layout">
+
+            <div class="doctors-intro__copy">
+                <span class="section-eyebrow">THE PEOPLE BEHIND YOUR CARE</span>
+
+                <h1>
+                    Meet the people<br>
+                    who put <em>your skin first.</em>
+                </h1>
+
+                <p>
+                    Thoughtful dermatology begins with listening.
+                    Meet the professionals who can help you understand
+                    your skin and explore suitable care options.
+                </p>
+
+                <a href="#medical-team" class="doctors-scroll-link">
+                    <span>MEET OUR TEAM</span>
+                    <i data-lucide="arrow-down-right"></i>
+                </a>
+
+                <div class="doctors-intro__note">
+                    <span class="doctors-intro__note-line"></span>
+                    <span>PERSONAL ATTENTION. PROFESSIONAL GUIDANCE.</span>
+                </div>
+            </div>
+
+            <div class="doctors-intro__visual">
+                <div class="doctors-intro__portrait">
+                    <img
+                        src="./images/home1/docter-1.jpg"
+                        alt="Medical professional in a clinical setting"
+                        fetchpriority="high">
+                </div>
+
+                <div class="doctors-intro__portrait-label">
+                    <span>ELARA</span>
+                    <span>YOUR SKIN, OUR ATTENTION</span>
+                </div>
+
+                <span class="doctors-intro__vertical-note">
+                    CARE WITH UNDERSTANDING
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 2: FEATURED SPECIALIST -->
+    <section class="featured-doctor" id="featured-doctor">
+        <div class="global-container featured-doctor__layout">
+
+            <div class="featured-doctor__image">
+                <img
+                    src="./images/doctors/section-2.jpg"
+                    alt="Doctor portrait"
+                    loading="lazy">
+
+                <span class="featured-doctor__image-label">
+                    MEET YOUR SPECIALIST
+                </span>
+            </div>
+
+            <div class="featured-doctor__content">
+                <span class="section-eyebrow">01 / FEATURED SPECIALIST</span>
+
+                <h2>Care that begins with <em>understanding.</em></h2>
+
+                <p class="featured-doctor__description">
+                    Every skin journey is different. Our approach begins
+                    with understanding your concerns, discussing your
+                    options, and helping you make informed decisions.
+                </p>
+
+                <div class="featured-doctor__details">
+                    <div>
+                        <span>AREA OF PRACTICE</span>
+                        <strong>Dermatology & Skin Health</strong>
+                    </div>
+
+                    <div>
+                        <span>CONSULTATION APPROACH</span>
+                        <strong>Individual Assessment</strong>
+                    </div>
+                </div>
+
+                <p class="featured-doctor__disclaimer">
+                    Contact the clinic for the specialist's name,
+                    verified qualifications, and appointment availability.
+                </p>
+
+                <a href="login.html" class="btn btn-primary">
+                    Arrange a Consultation
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 3: MEDICAL TEAM DIRECTORY -->
+    <section class="medical-team" id="medical-team">
+        <div class="global-container">
+
+            <div class="medical-team__heading">
+                <div>
+                    <span class="section-eyebrow">02 / OUR MEDICAL TEAM</span>
+                    <h2>Different concerns.<br><em>One thoughtful approach.</em></h2>
+                </div>
+
+                <p>
+                    Find out more about the professionals who can guide
+                    your skin-care journey.
+                </p>
+            </div>
+
+            <div class="medical-team__list">
+
+                <article class="doctor-row">
+                    <span class="doctor-row__number">01</span>
+
+                    <div class="doctor-row__portrait">
+                        <img
+                            src="./images/doctors/doc-1.jpg"
+                            alt="Medical professional portrait"
+                            loading="lazy">
+                    </div>
+
+                    <div class="doctor-row__info">
+                        <span>SKIN HEALTH</span>
+                        <h3>Dermatology Specialist</h3>
+                        <p>Skin concerns and individual assessment</p>
+                    </div>
+
+                    <a href="contact.html" class="doctor-row__link"
+                       aria-label="Ask about the dermatology specialist">
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article class="doctor-row">
+                    <span class="doctor-row__number">02</span>
+
+                    <div class="doctor-row__portrait">
+                        <img
+                            src="./images/doctors/doc-2.jpg"
+                            alt="Medical professional portrait"
+                            loading="lazy">
+                    </div>
+
+                    <div class="doctor-row__info">
+                        <span>SKIN CONSULTATION</span>
+                        <h3>Consulting Physician</h3>
+                        <p>Understanding concerns and care options</p>
+                    </div>
+
+                    <a href="contact.html" class="doctor-row__link"
+                       aria-label="Ask about the consulting physician">
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article class="doctor-row">
+                    <span class="doctor-row__number">03</span>
+
+                    <div class="doctor-row__portrait">
+                        <img
+                            src="./images/doctors/doc-3.jpg"
+                            alt="Medical professional portrait"
+                            loading="lazy">
+                    </div>
+
+                    <div class="doctor-row__info">
+                        <span>PERSONALIZED CARE</span>
+                        <h3>Skin-Care Professional</h3>
+                        <p>Guidance on skin-care routines and follow-up</p>
+                    </div>
+
+                    <a href="contact.html" class="doctor-row__link"
+                       aria-label="Ask about the skin-care professional">
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+
+            </div>
+
+            <p class="medical-team__note">
+                These are placeholder role descriptions for the design.
+                Replace them with your clinic's actual team members,
+                verified qualifications, and services before publishing.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 4: OUR CARE PHILOSOPHY -->
+    <section class="doctor-philosophy">
+        <div class="global-container doctor-philosophy__layout">
+
+            <div class="doctor-philosophy__heading">
+                <span class="section-eyebrow">03 / WHAT GUIDES OUR CARE</span>
+
+                <h2>
+                    Good care is more than a treatment.
+                    <em>It's a conversation.</em>
+                </h2>
+
+                <p>
+                    We believe skin care should feel considered, clear,
+                    and centred on the person receiving it.
+                </p>
+            </div>
+
+            <div class="doctor-philosophy__principles">
+
+                <article class="philosophy-item">
+                    <span>01</span>
+                    <div>
+                        <h3>Listen first</h3>
+                        <p>
+                            Understand your concerns, experiences, and
+                            goals before discussing next steps.
+                        </p>
+                    </div>
+                    <i data-lucide="messages-square"></i>
+                </article>
+
+                <article class="philosophy-item">
+                    <span>02</span>
+                    <div>
+                        <h3>Explain clearly</h3>
+                        <p>
+                            Help you understand possible options,
+                            expectations, and relevant aftercare.
+                        </p>
+                    </div>
+                    <i data-lucide="book-open-check"></i>
+                </article>
+
+                <article class="philosophy-item">
+                    <span>03</span>
+                    <div>
+                        <h3>Care individually</h3>
+                        <p>
+                            Discuss an approach suited to your skin
+                            and professional assessment.
+                        </p>
+                    </div>
+                    <i data-lucide="heart-handshake"></i>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 5: DOCTORS CTA -->
+    <section class="doctors-cta" id="doctors-cta">
+        <div class="global-container">
+            <div class="doctors-cta__panel">
+
+                <div class="doctors-cta__marker">
+                    <span>04</span>
+                    <span class="doctors-cta__marker-line"></span>
+                    <span>LET'S BEGIN</span>
+                </div>
+
+                <div class="doctors-cta__copy">
+                    <span class="section-eyebrow">
+                        YOUR NEXT STEP
+                    </span>
+
+                    <h2>
+                        Start with a conversation.
+                        <em>Move forward with clarity.</em>
+                    </h2>
+
+                    <p>
+                        Have questions about your skin or our team?
+                        Get in touch to discuss the next step.
+                    </p>
+                </div>
+
+                <div class="doctors-cta__actions">
+                    <a href="login.html" class="btn btn-secondary">
+                        Arrange a Consultation
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a href="contact.html" class="doctors-cta__contact">
+                        <span>Prefer to ask first?</span>
+                        <strong>Contact our team</strong>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+
+                <span class="doctors-cta__watermark" aria-hidden="true">
+                    CARE
+                </span>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+
+    
+<!-- =========================================
+     GLOBAL FOOTER
+========================================== -->
+
+<footer class="site-footer" id="siteFooter">
+
+    <div class="global-container">
+
+        <div class="footer-main">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand-logo footer-logo">
+                    <img src="./images/logo/logo.png"
+                         alt="ELARA logo">
+
+                    <span class="brand-name">
+                        <span class="brand-title">ELARA</span>
+                        <span class="brand-subtitle">SKIN CLINIC</span>
+                    </span>
+                </a>
+
+                <p class="footer-description">
+                    Thoughtful dermatological care, personalized treatments,
+                    and expert guidance for healthier skin.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#" class="social-link"
+                       aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="social-link"
+                       aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="social-link"
+                       aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+
+                <h3 class="footer-heading">Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="treatments.html">Treatments</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- TREATMENTS -->
+            <div class="footer-column">
+
+                <h3 class="footer-heading">Our Treatments</h3>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="treatments.html#acne-care">Acne Care</a>
+                    </li>
+                    <li>
+                        <a href="treatments.html#laser-therapy">Laser Therapy</a>
+                    </li>
+                    <li>
+                        <a href="treatments.html#anti-aging">Anti-Aging</a>
+                    </li>
+                    <li>
+                        <a href="treatments.html#pigmentation">
+                            Pigmentation Care
+                        </a>
+                    </li>
+                    <li>
+                        <a href="treatments.html#skin-rejuvenation">
+                            Skin Rejuvenation
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="footer-column footer-contact">
+
+                <h3 class="footer-heading">Get in Touch</h3>
+
+                <p>
+                    <i data-lucide="map-pin"></i>
+                    <span>Your clinic address goes here</span>
+                </p>
+
+                <p>
+                    <i data-lucide="phone"></i>
+                    <a href="tel:+910000000000">+91 00000 00000</a>
+                </p>
+
+                <p>
+                    <i data-lucide="mail"></i>
+                    <a href="mailto:hello@example.com">
+                        hello@example.com
+                    </a>
+                </p>
+
+                <a href="login.html" class="btn btn-secondary footer-cta">
+                    Patient Login
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p class="copyright-text">
+                &copy; <span class="current-year"></span>
+                ELARA Skin Clinic. All rights reserved.
+            </p>
+
+            <div class="footer-legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+document.querySelectorAll(".current-year").forEach(function (element) {
+    element.textContent = new Date().getFullYear();
+});
+</script>
+</body>
+</html>
